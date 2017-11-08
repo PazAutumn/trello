@@ -2,13 +2,19 @@
 
 var padre = document.getElementById("padre_tablero");
 var hijo = document.getElementById("tablero");
-
+var nuevoDiv = document.getElementById("nuevo")
 
 //crenaod evento de click
-hijo.addEventListener("click", function{
+hijo.addEventListener("click", function(){
 /*	//ocultando hijo
 	hijo.style.display = "none";
 */
+
+	//creando un div para el input
+	var nuevoDiv = document.createElement("div");
+	nuevoDiv.classList.add("nuevo");  // dar clase para editar en css
+	padre.insertBefore(nuevoDiv, hijo);
+
 	//creando input
 	var input = document.createElement("input");
 	//agregando placeholder a input
@@ -23,16 +29,17 @@ hijo.addEventListener("click", function{
 	//creando texto del button
 	var save = document.createTextNode("Guardar");
 	//agregando nodo de texto al botón
-	button.appendChild("save");
+	button.appendChild(save);
 
 /*	//agregando input al padre
 	padre.appendChild("input");*/
 
-	//reemplazando hijo por input
-	padre.replaceChild(input,hijo);
-
+	//reemplazando hijo por nuevoDiv
+	padre.replaceChild(nuevoDiv,hijo);
+	//agregando input a nuevoDiv
+	nuevoDiv.appendChild(input);
 	//agregando button al padre
-	padre.appendChild("button");
+	nuevoDiv.appendChild(button);
 })
 
 

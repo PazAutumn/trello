@@ -32,8 +32,7 @@ body {
 	width: 200px;
 	height: auto;
 	background-color: #157CAC;		
-	margin-left: 50px;
-	float: left;	
+	margin-left: 50px;	
 	border-radius: 5px;
 	color: white;
 	padding: 20px;
@@ -45,6 +44,32 @@ body {
 	cursor: pointer;
 }
 
-#tablero p {
-	
+.nuevo {
+	width: 200px;
+	height: auto;
+	background-color: #157CAC;		
+	margin-left: 50px;	
+	border-radius: 5px;
+	padding: 20px;
+	margin: 20px;
+}
+
+.inpt {
+	width: 190px;
+	height: 40px;
+}
+
+.btn {
+	margin: 10px 0;
+	border: none;
+	padding: 10px;
+	background-color: #72BC5E;
+	color: white;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.btn:hover {
+	opacity: 0.5;
+	cursor: pointer;
 }
