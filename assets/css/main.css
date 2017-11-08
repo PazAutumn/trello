@@ -7,7 +7,7 @@ body {
 	width: 100%;
 	height: auto;
 	background-color: #1D8DC2;
-	font-family: "Roboto Mono", sans-serif;
+	font-family: sans-serif;
 }
 
 #barra {
@@ -28,21 +28,23 @@ body {
 	margin-top: 50px;
 }
 
-.container {
+#tablero {
 	width: 200px;
-	height: 50px;
-	background-color: #157CAC;
-	border: none;
-	margin: 20px;
-	padding: 20px;
+	height: auto;
+	background-color: #157CAC;		
 	margin-left: 50px;
-	float: left;
-	padding: 1px;
-	color: white;
+	float: left;	
 	border-radius: 5px;
+	color: white;
+	padding: 20px;
+	margin: 20px;
 }
 
-.container:hover {
+#tablero:hover {
 	background-color: #026AA7;
 	cursor: pointer;
+}
+
+#tablero p {
+	
 }
