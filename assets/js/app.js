@@ -6,9 +6,9 @@ var hijo = document.getElementById("tablero");
 
 //crenaod evento de click
 hijo.addEventListener("click", function{
-	//ocultando hijo
+/*	//ocultando hijo
 	hijo.style.display = "none";
-
+*/
 	//creando input
 	var input = document.createElement("input");
 	//agregando placeholder a input
@@ -25,8 +25,12 @@ hijo.addEventListener("click", function{
 	//agregando nodo de texto al botón
 	button.appendChild("save");
 
-	//agregando input al padre
-	padre.appendChild("input");
+/*	//agregando input al padre
+	padre.appendChild("input");*/
+
+	//reemplazando hijo por input
+	padre.replaceChild(input,hijo);
+
 	//agregando button al padre
 	padre.appendChild("button");
 })
