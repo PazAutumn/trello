@@ -73,7 +73,7 @@ body {
 }
 
 #btn:hover {
-	opacity: 0.5;
+	background-color: #5A9F5E;
 	cursor: pointer;
 }
 
@@ -88,10 +88,10 @@ body {
 	font-size: 14px;
 }
 
-#contenedorNombreLista strong {
+#contenedorNombreLista h4 {
 	display: block;
 	margin: 5px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 #contenedorNombreLista a {
@@ -103,4 +103,15 @@ body {
 #contenedorNombreLista a:hover {
 	text-decoration: underline;
 	color: #8C8C8C;
+}
+
+
+#txt {
+	width: 240px;
+	height: 54px;
+	border-radius: 5px;
+	border: none;
+	font-family: sans-serif;
+	font-size: 14px;
+	padding: 5px;
 }
