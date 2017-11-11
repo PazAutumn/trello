@@ -32,16 +32,14 @@ var elementoLista = document.getElementById('nombreLista');
 //a
 var crearTarjeta = document.getElementById('textoA');
 
+
 //crear evento de click en el botón guardar
 button.addEventListener("click", function(){
 
 	//ocultar nuevoDiv
-	nuevoDiv.style.display = "none";
-
+	nuevoDiv.style.display = "inline-block";
 	//rescatar el texto que ingresó el usuario en el input
 	var nombreLista = document.getElementById('inpt').value;
-	//limpiando input
-	document.getElementById('inpt').value = "";
 	//creando nodo de texto para nombreLista
 	var nodoTextInput = document.createTextNode(nombreLista);
 	
@@ -54,6 +52,7 @@ button.addEventListener("click", function(){
 	contenedorNombreLista.style.display = "inherit";
 	//visibilizando a
 	textoA.style.display = "inherit";
+		
 })
 		
 			
@@ -78,5 +77,31 @@ crearTarjeta.addEventListener("click", function(){
 })
 
 //guardando en variables elementos ocultos que utilizaremos
+//div contenedorNombreLista
+var contenedorNombreLista = document.getElementById('contenedorNombreLista');
+//textarea
+var txt = document.getElementById('txt');
+//button añadir
+var btn2 = document.getElementById('btn2');
 
 //creando evento de click en el botón añadir
+btn2.addEventListener("click", function(){
+
+	//rescatar lo escrito en el textarea
+	var nombreTarjeta = document.getElementById('txt').value;
+	//limpiando textarea
+	document.getElementById('txt').value = "";
+
+//creando elementos necesarios
+	//crear nuevo div contenedor de los datos ingresados por el usuario en el textarea
+	var lista = document.createElement("div");
+	//agregando clase a div
+	lista.setAttribute("class", "contenedorNombreTarjeta");
+	//creando nodo de texto para textarea
+	var nodoTextoTarjeta = document.createTextNode(nombreTarjeta);
+//Haciendo appendChild
+	//agregando nodo de texto a div nombre
+	lista.appendChild(nodoTextoTarjeta);
+	//agregando div al contenedorNombreLista antes del textarea
+	contenedorNombreLista.insertBefore(lista, txt); 
+})
